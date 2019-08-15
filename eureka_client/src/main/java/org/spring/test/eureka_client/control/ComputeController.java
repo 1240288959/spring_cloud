@@ -36,11 +36,6 @@ public class ComputeController {
             e.printStackTrace();
         }
 
-        /*List<String> services = client.getServices();
-        int order = client.getOrder();
-        List<ServiceInstance> instances = client.getInstances("compute-service");
-        ServiceInstance instance = instances.get(order);*/
-
         int r = a + b;
         logger.info("/add, host:" + address.getHostAddress() + ", port:" + port + ", service_id:" +
                 serviceId + ", result:" + r);

@@ -7,15 +7,16 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableCircuitBreaker
+@EnableHystrix
 @EnableEurekaClient
 @SpringBootApplication
 public class RibbonApplication {
 
-    @Bean
+    /*@Bean
     public ServletRegistrationBean getServlet(){
 
         HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
@@ -24,7 +25,7 @@ public class RibbonApplication {
         registrationBean.addUrlMappings("/hystrix.stream");//路径
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
-    }
+    }*/
 
     @Bean
     @LoadBalanced

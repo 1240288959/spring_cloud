@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RestController
 public class ConsumerController {
 
-    @Autowired
+    @Resource
     private ComputeClient computeClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)

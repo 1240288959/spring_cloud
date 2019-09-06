@@ -25,7 +25,7 @@ public class ZuulFilter extends com.netflix.zuul.ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
 
     @Override
